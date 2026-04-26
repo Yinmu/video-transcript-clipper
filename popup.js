@@ -3,6 +3,7 @@ const downloadButton = document.getElementById('download-btn');
 const copyButton = document.getElementById('copy-btn');
 const obsidianButton = document.getElementById('obsidian-btn');
 const optionsButton = document.getElementById('options-btn');
+const helpButton = document.getElementById('help-btn');
 const copyLogButton = document.getElementById('copy-log-btn');
 const clearLogButton = document.getElementById('clear-log-btn');
 const toggleLogButton = document.getElementById('toggle-log-btn');
@@ -17,6 +18,7 @@ let lastCollectDiagnostics = [];
 let currentCollectLog = null;
 let diagnosticsExpanded = false;
 const MAX_MEDIA_BLOB_BYTES = 100 * 1024 * 1024;
+const README_URL = 'https://github.com/Yinmu/video-transcript-clipper#readme';
 
 function setStatus(text) {
   statusEl.textContent = text;
@@ -1122,6 +1124,10 @@ obsidianButton.addEventListener('click', async () => {
 
 optionsButton.addEventListener('click', () => {
   chrome.runtime.openOptionsPage();
+});
+
+helpButton.addEventListener('click', () => {
+  chrome.tabs.create({ url: README_URL });
 });
 
 copyLogButton.addEventListener('click', async () => {
