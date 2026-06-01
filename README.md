@@ -2,6 +2,24 @@
 
 一个轻量 Chrome 扩展，用于在抖音和小红书视频页面采集视频地址，调用用户自己的转写 API，将结果导出为 Markdown 或导入 Obsidian。
 
+## 项目状态
+
+本项目是一个仍在维护的开源浏览器扩展，目标用户是内容创作者、知识工作者和需要把短视频内容沉淀到 Markdown / Obsidian 工作流的人。
+
+当前维护重点：
+
+- 提升抖音、小红书页面媒体地址提取的稳定性。
+- 扩展并维护多个 ASR 厂商适配，包括 DashScope、豆包语音、腾讯云、OpenAI Audio、Deepgram、AssemblyAI 和自定义 API。
+- 改进错误日志、排查体验和不同平台的兼容性。
+- 保持 Manifest V3 原生扩展形态，尽量降低安装和二次开发门槛。
+
+维护资料：
+
+- [贡献指南](CONTRIBUTING.md)
+- [路线图](ROADMAP.md)
+- [变更记录](CHANGELOG.md)
+- [隐私说明](PRIVACY.md)
+
 ## 功能
 
 - 支持抖音视频文案转写
@@ -363,6 +381,13 @@ Content-Type: application/json
 ## 开发
 
 本项目是原生 Manifest V3 Chrome 扩展，没有构建步骤。
+
+推荐开发流程：
+
+1. 修改代码或文档。
+2. 运行下面的语法检查。
+3. 在 Chrome 或 Edge 开发者模式重新加载扩展。
+4. 至少用一个抖音或小红书页面完成采集、转写、复制 Markdown / 下载 Markdown 的手动验证。
 
 常用检查：
 
